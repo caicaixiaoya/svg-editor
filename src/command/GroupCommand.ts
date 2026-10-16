@@ -49,7 +49,8 @@ export class GroupCommand extends Command {
     }));
 
     const first = this.origins[0];
-    this.doc.detach(first.shape);
+    // 先摘除全部成员（校验已全部通过，此后的变更不会再失败），保证原子性
+    for (const origin of this.origins) this.doc.detach(origin.shape);
     this.group = new GroupShape(this.newGid);
     this.doc.attach(this.group, first.parent, first.index);
     for (const origin of this.origins) this.doc.attach(origin.shape, this.group);

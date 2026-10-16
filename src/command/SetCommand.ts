@@ -31,6 +31,6 @@ export class SetCommand extends Command {
   }
 
   private display(value: string): string {
-    return this.attr === 'text' ? `"${value}"` : `${this.attr}=${value}`;
+    return this.attr === 'text' ? `${this.attr}="${value}"` : `${this.attr}=${value}`;
   }
 }
