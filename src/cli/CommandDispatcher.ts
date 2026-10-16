@@ -166,7 +166,7 @@ export class CommandDispatcher {
     if (rest.length >= 2 && rest[rest.length - 2] === 'in') {
       containerId = rest.pop() as string;
       rest.pop();
-    } else if (rest.length === 1 && rest[0] === 'in') {
+    } else if (rest[rest.length - 1] === 'in') {
       throw new CliError(`expected <containerId> after 'in'`);
     }
     const shape = ShapeFactory.create(type, id, rest);
