@@ -1,5 +1,6 @@
 # Lab1 Phase 1：SVG 编辑器（CLI）——架构文档
 
+- 仓库：<https://github.com/caicaixiaoya/svg-editor>（`main` 分支；提交历史见 Commits，`final` 标签指向最终提交）
 - 语言/范式：TypeScript + 面向对象（类层次 + 多态、字段封装、一类一文件）
 - 运行：`npm install && npm run cli`（零运行时依赖）；测试：`npm test`；依赖检查：`npm run check:deps`
 
